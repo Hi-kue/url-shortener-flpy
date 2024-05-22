@@ -1,0 +1,23 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.2",
+  "description": "Url-Shortener website built with Flask & TailwindCSS",
+  "main": "index.js",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  },
+  "scripts": {
+    "build": "npx tailwindcss -i ./static/css/base.css -o ./static/css/styles.css --watch",
+    "test": "echo \"Error: Test Not Specified.\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hi-kue/url-shortener-flpy.git"
+  },
+  "author": "Muhammad Bilal Khan (Hi-kue)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Hi-kue/url-shortener-flpy/issues"
+  },
+  "homepage": "https://github.com/Hi-kue/url-shortener-flpy#readme"
+}
