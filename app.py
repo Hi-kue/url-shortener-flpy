@@ -7,7 +7,12 @@ CORS(app)
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('index.html')
+    return render_template(
+        'index.html',
+        urls_shortened= 1523,
+        users= '4.3k',
+        img_shortened= '1.3k'
+    )
 
 @app.route('/about', methods=['GET'])
 def about_section():
