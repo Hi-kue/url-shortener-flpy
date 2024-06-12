@@ -1,0 +1,17 @@
+name: Update the Copyright Year(s) on all License Files
+
+on:
+  schedule:
+    - cron: '0 0 1 1 *' # Run at Midnight every January 1st
+
+jobs:
+  run:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+          with:
+            fetch-depth: 0
+        - uses: FantasticFiasco/action-update-license-year@v3
+          with:
+            token: ${{ secrets.GITHUB_TOKEN }}
+            path: LICENSE
