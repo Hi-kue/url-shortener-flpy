@@ -19,6 +19,29 @@
     <a href="/">Documentation</a>
   </p>
 </div>
+<div align="center">
+    <!-- Build Status & Other Information -->
+    <a href="/url">
+        <img src="https://img.shields.io/github/issues/Hi-kue/url-shortener-flpy" alt="Issues">
+    </a>
+    <a href="/url">
+        <img src="https://img.shields.io/github/forks/Hi-kue/url-shortener-flpy" alt="Forks">
+    </a>
+    <a href="/url">
+        <img src="https://img.shields.io/github/stars/Hi-kue/url-shortener-flpy" alt="Stars">
+    </a>
+    <a href="/url">
+        <img src="https://img.shields.io/github/license/Hi-kue/url-shortener-flpy" alt="License">
+    </a>
+</div>
+<hr>
+<div align="center">
+    <!-- Badges & Built-With -->
+    <img src="https://img.shields.io/badge/python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+    <img src="https://img.shields.io/badge/-Flask-%23000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask">
+    <img src="https://img.shields.io/badge/-Tailwind%20CSS-%23068BFB?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS">
+    <img src="https://img.shields.io/badge/-SQLite-%23003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite">
+</div>
 
 ## Table of Contents
 
