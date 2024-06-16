@@ -1,8 +1,18 @@
-from flask import Flask, request, redirect, render_template, url_for
+from flask import Flask, request, redirect, render_template, url_for, flash
 from flask_cors import CORS
 from gevent.pywsgi import WSGIServer
+from secret_key_generator import secret_key_generator as skg
+import json
+import os.path
+
+SECRET_KEY_CHARS = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)"
+SECRET_KEY_LENGTH = 80
 
 app = Flask(__name__)
+app.secret_key = skg.generate(
+    chars=SECRET_KEY_CHARS,
+    len_of_secret_key=SECRET_KEY_LENGTH
+)
 CORS(app)
 
 
@@ -52,6 +62,22 @@ def about_section():
 @app.route("/url", methods=["GET", "POST"])
 def your_url():
     if request.method == "POST":
+        urls = {request.form["short_url"]: {
+            "url": request.form["url"],
+            "short_url": request.form["short_url"]
+        }}
+
+        if os.path.exists("data/urls.json"):
+            with open('urls.json') as file:
+                urls = json.load(file)
+
+        if request.form['short_url'] in urls.keys():
+            flash("Short URL already exists. Please try another one.")
+            return redirect(url_for("index"))
+
+        with open("data/urls.json", "w") as file:
+            json.dump(urls, file)
+
         return render_template("your_url.html", url=request.form["url"])
     else:
         return redirect(url_for("index"))

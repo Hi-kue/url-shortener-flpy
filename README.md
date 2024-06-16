@@ -34,7 +34,6 @@
         <img src="https://img.shields.io/github/license/Hi-kue/url-shortener-flpy" alt="License">
     </a>
 </div>
-<hr>
 <div align="center">
     <!-- Badges & Built-With -->
     <img src="https://img.shields.io/badge/python-%233776AB.svg?style=for-the-badge&logo=python&logoColor=white" alt="Python">
